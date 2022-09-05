@@ -1,6 +1,6 @@
-# vyper-by-example.github.io
+# dasy-by-example.github.io
 
-[Vyper By Example](https://vyper-by-example.org)
+[Dasy By Example](https://vyper-by-example.org)
 
 ### License
 
