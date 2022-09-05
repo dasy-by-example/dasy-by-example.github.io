@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Re-Entrancy Lock"
-export const description = "Re-entrancy lock in Vyper"
+export const version = "0.3.3";
+export const title = "Re-Entrancy Lock";
+export const description = "Re-entrancy lock in Vyper";
 
 const html = `<p>Vyper has a handy way to secure your contract from re-entrancy.</p>
 <p>A re-entrancy lock can be created on a function with <code>@nonreentrant("lock")</code>.</p>
@@ -27,6 +27,6 @@ const html = `<p>Vyper has a handy way to secure your contract from re-entrancy.
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">func2</span>():
     raw_call(msg.sender, <span class="hljs-string">b""</span>, value=<span class="hljs-number">0</span>)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

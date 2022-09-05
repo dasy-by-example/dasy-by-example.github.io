@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "For Loop"
-export const description = "For loop in Vyper"
+export const version = "0.3.3";
+export const title = "For Loop";
+export const description = "For loop in Vyper";
 
 const html = `<p>There are 2 ways to loop through an array, using <code>range</code> and directly looping through array elements.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -47,6 +47,6 @@ const html = `<p>There are 2 ways to loop through an array, using <code>range</c
         s += n
     <span class="hljs-keyword">return</span> s
 </code></pre>
-`
+`;
 
-export default html
+export default html;

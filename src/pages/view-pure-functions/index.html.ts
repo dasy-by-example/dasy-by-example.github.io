@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "View and Pure Functions"
-export const description = "View and pure functions in Vyper"
+export const version = "0.3.3";
+export const title = "View and Pure Functions";
+export const description = "View and pure functions in Vyper";
 
 const html = `<p>Both <code>pure</code> and <code>view</code> functions are read only function, they cannot write anything to the blockchain.</p>
 <p><code>pure</code> functions do not read any state or global variables</p>
@@ -35,6 +35,6 @@ num: public(uint256)
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">addNum</span>(<span class="hljs-params">x: uint256</span>) -&gt; uint256:
     <span class="hljs-keyword">return</span> x + self.num
 </code></pre>
-`
+`;
 
-export default html
+export default html;

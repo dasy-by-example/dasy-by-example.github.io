@@ -2,7 +2,7 @@
   "name": "vyper-by-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vyper-by-example.org",
+  "homepage": "http://dasy-by-example.github.io/dasy-by-example",
   "dependencies": {
     "highlight.js": "^11.5.1",
     "npm-check-updates": "^15.2.5",
@@ -24,7 +24,7 @@
     "copy-index-to-404": "cp build/index.html build/404.html",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b main -d build",
     "md-to-react": "node scripts/md-to-react.js",
     "lint": "prettier --write src"
   },

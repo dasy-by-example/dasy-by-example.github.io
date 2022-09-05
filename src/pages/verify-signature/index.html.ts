@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Verify Signature"
-export const description = "Verify signature in Vyper"
+export const version = "0.3.3";
+export const title = "Verify Signature";
+export const description = "Verify signature in Vyper";
 
 const html = `<p>Signing and verifying signature takes 3 steps.</p>
 <ol>
@@ -62,6 +62,6 @@ const html = `<p>Signing and verifying signature takes 3 steps.</p>
 
     <span class="hljs-keyword">return</span> _signer == signer
 </code></pre>
-`
+`;
 
-export default html
+export default html;

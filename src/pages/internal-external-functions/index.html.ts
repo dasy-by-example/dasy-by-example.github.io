@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Internal and External Functions"
-export const description = "Internal and external functions in Vyper"
+export const version = "0.3.3";
+export const title = "Internal and External Functions";
+export const description = "Internal and external functions in Vyper";
 
 const html = `<p><code>@internal</code> functions can only be called inside the contract.</p>
 <p><code>@external</code> functions can only be called from outside the contract.</p>
@@ -44,6 +44,6 @@ const html = `<p><code>@internal</code> functions can only be called inside the 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">sumOfSquares</span>(<span class="hljs-params">x: uint256, y: uint256</span>) -&gt; uint256:
     <span class="hljs-keyword">return</span> self._sqr(x) + self._sqr(y)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

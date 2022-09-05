@@ -1,9 +1,9 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import React from "react";
+import { Helmet } from "react-helmet";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 const SEO: React.FC<Props> = ({ title, description }) => {
@@ -12,7 +12,7 @@ const SEO: React.FC<Props> = ({ title, description }) => {
       <title>{title}</title>
       <meta name="Description" content={description} />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

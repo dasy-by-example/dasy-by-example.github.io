@@ -1,18 +1,18 @@
-import React from "react"
-import { useAppContext, Theme } from "../contexts/AppContext"
-import styles from "./Header.module.css"
-import logoLight from "./logo.png"
-import logoDark from "./logo-dark.png"
-import modeLight from "./mode-light.png"
-import modeDark from "./mode-dark.png"
+import React from "react";
+import { useAppContext, Theme } from "../contexts/AppContext";
+import styles from "./Header.module.css";
+import logoLight from "./logo.png";
+import logoDark from "./logo-dark.png";
+import modeLight from "./mode-light.png";
+import modeDark from "./mode-dark.png";
 
 function Header() {
-  const { state, setTheme } = useAppContext()
+  const { state, setTheme } = useAppContext();
 
-  let logo = state.theme == "dark" ? logoDark : logoLight
+  let logo = state.theme == "dark" ? logoDark : logoLight;
 
   function onClickTheme(theme: Theme) {
-    setTheme(theme)
+    setTheme(theme);
   }
 
   // NOTE: need to use links for versions so that react-snap can crawl
@@ -46,7 +46,7 @@ function Header() {
         />
       )}
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

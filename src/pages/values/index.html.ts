@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Data Types - Values"
-export const description = "Values in Vyper"
+export const version = "0.3.3";
+export const title = "Data Types - Values";
+export const description = "Values in Vyper";
 
 const html = `<p>Some values available in Vyper</p>
 <ul>
@@ -37,6 +37,6 @@ s: public(String[<span class="hljs-number">100</span>])
     self.bs = <span class="hljs-string">b"\\x01"</span>
     self.s = <span class="hljs-string">"Hello Vyper"</span>
 </code></pre>
-`
+`;
 
-export default html
+export default html;

@@ -4,13 +4,13 @@
 // import "highlight.js/styles/github-dark.css"
 // @ts-ignore
 // import hljsDefineVyper from "highlightjs-vyper"
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
 // hljsDefineVyper(hljs)
 // hljs.initHighlightingOnLoad()
 
 interface Props {
-  html: string
+  html: string;
 }
 
 const Html: React.FC<Props> = ({ html }) => {
@@ -31,55 +31,55 @@ const Html: React.FC<Props> = ({ html }) => {
   useEffect(() => {
     // Skip creating elements when pre-rendering
     if (navigator.userAgent === "ReactSnap") {
-      return
+      return;
     }
 
     const copy = (target: any) => {
-      const textArea = document.createElement("textarea")
-      textArea.setAttribute("style", "width:1px;border:0;opacity:0;")
-      document.body.appendChild(textArea)
+      const textArea = document.createElement("textarea");
+      textArea.setAttribute("style", "width:1px;border:0;opacity:0;");
+      document.body.appendChild(textArea);
 
-      textArea.value = target.innerText
-      textArea.select()
-      document.execCommand("copy")
+      textArea.value = target.innerText;
+      textArea.select();
+      document.execCommand("copy");
 
-      document.body.removeChild(textArea)
-    }
+      document.body.removeChild(textArea);
+    };
 
-    const pres = document.querySelectorAll("pre")
+    const pres = document.querySelectorAll("pre");
     pres.forEach((pre) => {
       // div
-      const div = document.createElement("div")
-      div.className = "buttons"
+      const div = document.createElement("div");
+      div.className = "buttons";
 
       // button
-      const button = document.createElement("button")
-      button.className = "fa fa-copy clip-button"
-      button.title = "Copy to clipboard"
+      const button = document.createElement("button");
+      button.className = "fa fa-copy clip-button";
+      button.title = "Copy to clipboard";
       // @ts-ignore
-      button.ariaLabel = "Copy to clipboard"
+      button.ariaLabel = "Copy to clipboard";
 
-      const icon = document.createElement("i")
-      icon.className = "tooltiptext"
-      button.appendChild(icon)
+      const icon = document.createElement("i");
+      icon.className = "tooltiptext";
+      button.appendChild(icon);
 
-      div.appendChild(button)
+      div.appendChild(button);
 
-      const code = pre.firstChild
-      pre.insertBefore(div, code)
+      const code = pre.firstChild;
+      pre.insertBefore(div, code);
 
       // button on click
       button.addEventListener("click", (e) => {
-        e.preventDefault()
+        e.preventDefault();
         // NOTE:
         // child 0 = <div class="buttons">
         // child 1 = <code>
-        copy(pre.childNodes[1])
-      })
-    })
-  }, [])
+        copy(pre.childNodes[1]);
+      });
+    });
+  }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: html }}></div>
-}
+  return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
+};
 
-export default Html
+export default Html;

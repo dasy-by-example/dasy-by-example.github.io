@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Hash Function"
-export const description = "Hash function in Vyper"
+export const version = "0.3.3";
+export const title = "Hash Function";
+export const description = "Hash function in Vyper";
 
 const html = `<p>Vyper supports the same hash function available in Solidity, <code>keccack256</code>.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -26,6 +26,6 @@ const html = `<p>Vyper supports the same hash function available in Solidity, <c
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">getMessageHash</span>(<span class="hljs-params">_<span class="hljs-built_in">str</span>: String[<span class="hljs-number">100</span>]</span>) -&gt; bytes32:
     <span class="hljs-keyword">return</span> keccak256(_<span class="hljs-built_in">str</span>)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

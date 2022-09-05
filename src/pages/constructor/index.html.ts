@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Constructor"
-export const description = "Constructor in Vyper"
+export const version = "0.3.3";
+export const title = "Constructor";
+export const description = "Constructor in Vyper";
 
 const html = `<p><code>__init__</code> is a special function that is executed only once when the contract is deployed.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -21,6 +21,6 @@ expiresAt: public(uint256)
     self.createdAt = block.timestamp
     self.expiresAt = block.timestamp + duration
 </code></pre>
-`
+`;
 
-export default html
+export default html;

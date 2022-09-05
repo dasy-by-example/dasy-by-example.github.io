@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Interface"
-export const description = "Interface in Vyper"
+export const version = "0.3.3";
+export const title = "Interface";
+export const description = "Interface in Vyper";
 
 const html = `<p>Use <code>interface</code> to call other smart contracts.</p>
 <p>Here is the <code>TestInterface</code> self.contract that we will call.</p>
@@ -86,6 +86,6 @@ test: public(TestInterface)
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">setOwnerAndSendEth</span>(<span class="hljs-params">owner: address</span>):
     self.test.setOwnerAndSendEth(owner, value=msg.value)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

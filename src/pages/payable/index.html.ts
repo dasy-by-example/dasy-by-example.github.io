@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Payable"
-export const description = "Payable in Vyper"
+export const version = "0.3.3";
+export const title = "Payable";
+export const description = "Payable in Vyper";
 
 const html = `<p>Functions declared with <code>@payable</code> can receive Ether.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -34,6 +34,6 @@ owner: public(address)
     <span class="hljs-keyword">assert</span> msg.value &gt; <span class="hljs-number">0</span>, <span class="hljs-string">"msg.value = 0"</span>
     self.owner = msg.sender
 </code></pre>
-`
+`;
 
-export default html
+export default html;

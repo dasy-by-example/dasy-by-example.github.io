@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Function"
-export const description = "Function in Vyper"
+export const version = "0.3.3";
+export const title = "Function";
+export const description = "Function in Vyper";
 
 const html = `<pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
 
@@ -38,6 +38,6 @@ const html = `<pre><code class="language-vyper"><span class="hljs-comment"># @ve
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">addAndSub</span>(<span class="hljs-params">x: uint256, y: uint256</span>) -&gt; (uint256, uint256):
     <span class="hljs-keyword">return</span> (x + y, x - y)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

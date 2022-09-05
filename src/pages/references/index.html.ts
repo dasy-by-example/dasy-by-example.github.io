@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Data Types - References"
-export const description = "References in Vyper"
+export const version = "0.3.3";
+export const title = "Data Types - References";
+export const description = "References in Vyper";
 
 const html = `<p>References types are data types that are passed by their reference, pointer to where the actual data is stored.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -40,6 +40,6 @@ person: public(Person)
     p: Person = self.person
     p.name = <span class="hljs-string">"Solidity"</span>
 </code></pre>
-`
+`;
 
-export default html
+export default html;

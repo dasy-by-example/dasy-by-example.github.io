@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Create New Contract"
-export const description = "Create new contract in Vyper"
+export const version = "0.3.3";
+export const title = "Create New Contract";
+export const description = "Create new contract in Vyper";
 
 const html = `<p>Vyper contracts can deploy new contracts using the function <code>create_forwarder_to</code>.</p>
 <p><code>create_forwarder_to</code> is also known as "minimal proxy contract". How it works, we won&#39;t explain it here.</p>
@@ -12,6 +12,7 @@ const html = `<p>Vyper contracts can deploy new contracts using the function <co
 <li>Call <code>deploy()</code> passing the address of the master copy and any other arguments needed to setup the new contract</li>
 </ol>
 <p>Here is <code>ContractToDeploy</code></p>
+<p>ContractToDeploy.vy</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
 
 
@@ -36,6 +37,7 @@ owner: public(address)
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">kill</span>():
   selfdestruct(msg.sender)
 </code></pre>
+<p>Create.vy</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
 
 
@@ -60,6 +62,6 @@ event Log:
     ContractToDeploy(addr).setup(self)
     log Log(addr)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

@@ -56,6 +56,11 @@ async function findVyperFiles(dir: string): Promise<string[]> {
   return files.filter((file) => file.split(".").pop() == "vy")
 }
 
+async function findDasyFiles(dir: string): Promise<string[]> {
+  const files = await readdir(dir)
+  return files.filter((file) => file.split(".").pop() == "dasy")
+}
+
 async function mdToHtml(filePath: string) {
   const folders = filePath.split("/")
   const tail = folders.pop()
@@ -68,12 +73,19 @@ async function mdToHtml(filePath: string) {
 
   // get vyper code
   const vyperFileNames = await findVyperFiles(dir)
+  const dasyFileNames = await findDasyFiles(dir)
 
   const codes = {}
   for (const vyFileName of vyperFileNames) {
     const source = (await readFile(path.join(dir, vyFileName))).toString()
     // @ts-ignore
     codes[removeExt(vyFileName)] = source
+  }
+
+  for (const dasyFileName of dasyFileNames) {
+    const source = (await readFile(path.join(dir, dasyFileName))).toString()
+    // @ts-ignore
+    codes[removeExt(dasyFileName)] = source
   }
 
   // render vyper inside markdown
@@ -86,6 +98,10 @@ async function mdToHtml(filePath: string) {
       if (language == "vyper") {
         return hljs.highlight(code, { language: "python" }).value
       }
+      if (language == "dasy") {
+        return hljs.highlight(code, { language: "clojure" }).value
+      }
+
       return code
     },
   })

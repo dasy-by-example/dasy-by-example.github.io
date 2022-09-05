@@ -1,21 +1,21 @@
-import React, { useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { useAppContext } from "./contexts/AppContext"
-import styles from "./App.module.css"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import routes from "./routes"
-import { getPrevNextPaths } from "./pages/index"
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useAppContext } from "./contexts/AppContext";
+import styles from "./App.module.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import routes from "./routes";
+import { getPrevNextPaths } from "./pages/index";
 
 function App() {
-  const { state, loadLocalStorage } = useAppContext()
+  const { state, loadLocalStorage } = useAppContext();
 
   useEffect(() => {
-    loadLocalStorage()
-  }, [])
+    loadLocalStorage();
+  }, []);
 
   if (state.loading) {
-    return null
+    return null;
   }
 
   return (
@@ -25,14 +25,14 @@ function App() {
         <div className={styles.main}>
           <Routes>
             {routes.map((route) => {
-              const { prev, next } = getPrevNextPaths(route.path)
+              const { prev, next } = getPrevNextPaths(route.path);
               return (
                 <Route
                   key={route.path}
                   path={route.path}
                   element={route.component({ prev, next })}
                 />
-              )
+              );
             })}
           </Routes>
         </div>
@@ -41,7 +41,7 @@ function App() {
         </div>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

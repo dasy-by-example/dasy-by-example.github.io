@@ -1,20 +1,20 @@
-import React from "react"
-import SEO from "./SEO"
-import Html from "./Html"
-import styles from "./Example.module.css"
+import React from "react";
+import SEO from "./SEO";
+import Html from "./Html";
+import styles from "./Example.module.css";
 
 interface Path {
-  title: string
-  path: string
+  title: string;
+  path: string;
 }
 
 interface Props {
-  title: string
-  description: string
-  version: "0.3.3"
-  html: string
-  prev: Path | null
-  next: Path | null
+  title: string;
+  description: string;
+  version: "0.3.3";
+  html: string;
+  prev: Path | null;
+  next: Path | null;
 }
 
 const Example: React.FC<Props> = ({
@@ -62,7 +62,7 @@ const Example: React.FC<Props> = ({
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Example
+export default Example;

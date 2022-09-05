@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Delegate Call"
-export const description = "Delegate call in Vyper"
+export const version = "0.3.3";
+export const title = "Delegate Call";
+export const description = "Delegate call in Vyper";
 
 const html = `<p>When contract <code>A</code> delegates call to contract <code>B</code>, <code>B</code>&#39;s code will be executed inside contract <code>A</code>. This will update state variables and Ether balance inside contract <code>A</code> and not <code>B</code>.</p>
 <p>Delegate call is commonly used to create an upgradable contract.</p>
@@ -57,6 +57,6 @@ y: public(uint256)
         is_delegate_call=<span class="hljs-literal">True</span>
     )
 </code></pre>
-`
+`;
 
-export default html
+export default html;

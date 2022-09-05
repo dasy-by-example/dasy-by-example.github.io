@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Event"
-export const description = "Event in Vyper"
+export const version = "0.3.3";
+export const title = "Event";
+export const description = "Event in Vyper";
 
 const html = `<p>Events write logs to the blockchain, commonly used by application to monitor blockchain state and as a cheaper alternative to store data on the blockchain without using state variables.</p>
 <p>Events can be efficiently searched by indexing their arguments. Up to 3 parameters can be indexed.</p>
@@ -33,6 +33,6 @@ event Transfer:
     <span class="hljs-comment"># some code ...</span>
     log Transfer(msg.sender, ZERO_ADDRESS, amount)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

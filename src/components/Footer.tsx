@@ -1,12 +1,12 @@
-import React from "react"
-import styles from "./Footer.module.css"
-import sce from "./sce.png"
-import youTube from "./youtube.png"
-import telegram from "./telegram.png"
-import discord from "./discord.png"
+import React from "react";
+import styles from "./Footer.module.css";
+import sce from "./sce.png";
+import youTube from "./youtube.png";
+import telegram from "./telegram.png";
+import discord from "./discord.png";
 
 // Khan Academy
-const ADDRESS = "0x95a647B3d8a3F11176BAdB799b9499C671fa243a"
+const ADDRESS = "0x95a647B3d8a3F11176BAdB799b9499C671fa243a";
 
 function Footer() {
   return (
@@ -53,12 +53,18 @@ function Footer() {
       </div>
       <div className={styles.row}>
         your ETH will directly go to
-        <a href="https://khanacademy.org" target="__blank" className={styles.khan}>
+        <a
+          href="https://khanacademy.org"
+          target="__blank"
+          className={styles.khan}
+        >
           Khan Academy
         </a>
       </div>
       <div className={styles.row}>
-        <a href="mailto:contact@vyper-by-example.org">contact@vyper-by-example.org</a>
+        <a href="mailto:contact@vyper-by-example.org">
+          contact@vyper-by-example.org
+        </a>
       </div>
       <div className={styles.row}>
         <a
@@ -76,7 +82,7 @@ function Footer() {
         </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

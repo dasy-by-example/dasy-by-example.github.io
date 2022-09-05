@@ -1,11 +1,11 @@
-import React from "react"
-import SEO from "../components/SEO"
-import styles from "./index.module.css"
-import youTube from "../components/youtube.png"
+import React from "react";
+import SEO from "../components/SEO";
+import styles from "./index.module.css";
+import youTube from "../components/youtube.png";
 
 interface Route {
-  path: string
-  title: string
+  path: string;
+  title: string;
 }
 
 const SOL_ROUTES: Route[] = [
@@ -17,7 +17,10 @@ const SOL_ROUTES: Route[] = [
   { path: "references", title: "Data Types - References" },
   { path: "dynamic-arrays", title: "Dynamic Arrays" },
   { path: "function", title: "Function" },
-  { path: "internal-external-functions", title: "Internal and External Functions" },
+  {
+    path: "internal-external-functions",
+    title: "Internal and External Functions",
+  },
   { path: "view-pure-functions", title: "View and Pure Functions" },
   { path: "constructor", title: "Constructor" },
   {
@@ -41,7 +44,7 @@ const SOL_ROUTES: Route[] = [
   { path: "create-new-contract", title: "Create New Contract" },
   { path: "re-entrancy-lock", title: "Re-entrancy Lock" },
   { path: "self-destruct", title: "Self Destruct" },
-]
+];
 
 export const ROUTES_BY_CATEGORY = [
   {
@@ -51,33 +54,31 @@ export const ROUTES_BY_CATEGORY = [
       path: `/${route.path}`,
     })),
   },
-]
+];
 
-const ROUTES = ROUTES_BY_CATEGORY.map(({ routes }) => routes).flat()
+const ROUTES = ROUTES_BY_CATEGORY.map(({ routes }) => routes).flat();
 const ROUTE_INDEX_BY_PATH = ROUTES.reduce((map, route: Route, i) => {
   // @ts-ignore
-  map[route.path] = i
-  return map
-}, {})
+  map[route.path] = i;
+  return map;
+}, {});
 
 export function getPrevNextPaths(path: string): {
-  prev: Route | null
-  next: Route | null
+  prev: Route | null;
+  next: Route | null;
 } {
   // @ts-ignore
-  const index = ROUTE_INDEX_BY_PATH[path]
+  const index = ROUTE_INDEX_BY_PATH[path];
   if (index >= 0) {
-    const prev = ROUTES[index - 1] || null
-    const next = ROUTES[index + 1] || null
-    return { prev, next }
+    const prev = ROUTES[index - 1] || null;
+    const next = ROUTES[index + 1] || null;
+    return { prev, next };
   }
   return {
     prev: null,
     next: null,
-  }
+  };
 }
-
-const UPDATES = ["2022/07/24 - Launch"]
 
 export default function HomePage() {
   return (
@@ -91,26 +92,7 @@ export default function HomePage() {
       </h1>
       <div className={styles.subHeader}>v 0.3.3</div>
       <div className={styles.main}>
-        <p>
-          an introduction to <a href="https://vyper.readthedocs.io">Vyper</a> with
-          simple examples
-        </p>
-
-        <div className={styles.youTube}>
-          <img src={youTube} alt="logo" className={styles.youTubeLogo} />
-          <a
-            href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA"
-            target="__blank"
-          >
-            Most code are explained here
-          </a>
-        </div>
-
-        <div className={styles.updates}>
-          {UPDATES.map((text, i) => (
-            <div key={i}>{text}</div>
-          ))}
-        </div>
+        <p>an introduction to Dasy with simple examples</p>
 
         {ROUTES_BY_CATEGORY.map(({ routes, title }, i) => (
           <div key={i}>
@@ -127,5 +109,5 @@ export default function HomePage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Constants"
-export const description = "Constants in Vyper"
+export const version = "0.3.3";
+export const title = "Constants";
+export const description = "Constants in Vyper";
 
 const html = `<p>Constants are variables that cannot change.</p>
 <pre><code class="language-vyper"><span class="hljs-comment"># @version ^0.3.3</span>
@@ -24,6 +24,6 @@ ADDR: constant(address) = <span class="hljs-number">0xAb5801a7D398351b8bE11C439e
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">getMyConstants</span>() -&gt; (uint256, uint256, address):
     <span class="hljs-keyword">return</span> (MIN, MAX, ADDR)
 </code></pre>
-`
+`;
 
-export default html
+export default html;

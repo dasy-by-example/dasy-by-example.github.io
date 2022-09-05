@@ -1,7 +1,7 @@
 // metadata
-export const version = "0.3.3"
-export const title = "Private and Public State Variables"
-export const description = "Private and public state variables in Vyper"
+export const version = "0.3.3";
+export const title = "Private and Public State Variables";
+export const description = "Private and public state variables in Vyper";
 
 const html = `<p>Private state variables cannot be accessed from outside the contract.</p>
 <p>Public state variables can be read by anyone, including users and other contracts.</p>
@@ -20,6 +20,6 @@ bar: public(<span class="hljs-built_in">bool</span>)
     self.foo = <span class="hljs-number">123</span>
     self.bar = <span class="hljs-literal">True</span>
 </code></pre>
-`
+`;
 
-export default html
+export default html;
