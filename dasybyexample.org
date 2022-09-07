@@ -1,6 +1,6 @@
 #+title: Dasy By Example
-#+PROPERTY: EXPORT_FILE_NAME index
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+EXPORT_FILE_NAME: index
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * Hello World
 #+include: "./examples/hello_world.dasy" src clojure -n
