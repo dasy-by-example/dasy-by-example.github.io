@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-06 Tue 22:33 -->
+<!-- 2022-09-06 Tue 22:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dasy By Example</title>
@@ -193,6 +193,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 </head>
 <body>
 <div id="content" class="content">
@@ -201,35 +202,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org82fb805">1. Hello World</a></li>
-<li><a href="#org731c48b">2. Data Types - Values</a></li>
-<li><a href="#org963ed10">3. Data Types - References</a></li>
-<li><a href="#orgaf4eec9">4. Dynamic Arrays</a></li>
-<li><a href="#org27b48aa">5. Functions</a></li>
-<li><a href="#org484453f">6. Internal and External Functions</a></li>
-<li><a href="#orgbb4fdb3">7. View and Pure Functions</a></li>
-<li><a href="#orgf106134">8. Constructor</a></li>
-<li><a href="#org9ec7bac">9. Private and Public State Variables</a></li>
-<li><a href="#orgbda46d6">10. Constants</a></li>
-<li><a href="#org209a3bb">11. Immutable</a></li>
-<li><a href="#orgbd3ca25">12. If/Else</a></li>
-<li><a href="#org566cc5c">13. For Loop</a></li>
-<li><a href="#org93e73da">14. Errors</a></li>
-<li><a href="#org1fd48ba">15. Events</a></li>
-<li><a href="#orgaa5dab1">16. Payable</a></li>
-<li><a href="#org802bf2d">17. Default Function</a></li>
-<li><a href="#org3c01aaa">18. Send Ether</a></li>
-<li><a href="#orgab2e3a5">19. Raw Call</a></li>
-<li><a href="#orgf291cdb">20. Delegate Call</a></li>
-<li><a href="#org22d632e">21. Interface</a></li>
-<li><a href="#org03542c5">22. Hash Function</a></li>
-<li><a href="#org11ff42b">23. Re-Entrancy Lock</a></li>
-<li><a href="#org5737053">24. Self Destruct</a></li>
+<li><a href="#org01bea9d">1. Hello World</a></li>
+<li><a href="#org893a405">2. Data Types - Values</a></li>
+<li><a href="#org9d84856">3. Data Types - References</a></li>
+<li><a href="#orgfaadd86">4. Dynamic Arrays</a></li>
+<li><a href="#orgf7d0942">5. Functions</a></li>
+<li><a href="#org354c9ac">6. Internal and External Functions</a></li>
+<li><a href="#org1d0ec62">7. View and Pure Functions</a></li>
+<li><a href="#org59ebd79">8. Constructor</a></li>
+<li><a href="#org66fe553">9. Private and Public State Variables</a></li>
+<li><a href="#org43040c5">10. Constants</a></li>
+<li><a href="#org64fc9f5">11. Immutable</a></li>
+<li><a href="#orgc113e91">12. If/Else</a></li>
+<li><a href="#orgfa71d98">13. For Loop</a></li>
+<li><a href="#org7e214c9">14. Errors</a></li>
+<li><a href="#org032d47b">15. Events</a></li>
+<li><a href="#org9017d26">16. Payable</a></li>
+<li><a href="#org1b63b2e">17. Default Function</a></li>
+<li><a href="#org6c19a82">18. Send Ether</a></li>
+<li><a href="#org1c0b96d">19. Raw Call</a></li>
+<li><a href="#orgb0d7461">20. Delegate Call</a></li>
+<li><a href="#org94aae31">21. Interface</a></li>
+<li><a href="#org9fe0e1a">22. Hash Function</a></li>
+<li><a href="#orge09880c">23. Re-Entrancy Lock</a></li>
+<li><a href="#org17a2fb7">24. Self Destruct</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org82fb805" class="outline-2">
-<h2 id="org82fb805"><span class="section-number-2">1.</span> Hello World</h2>
+
+<div id="outline-container-org01bea9d" class="outline-2">
+<h2 id="org01bea9d"><span class="section-number-2">1.</span> Hello World</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Create a string variable that can store maximum 100 characters</span>
@@ -241,8 +243,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org731c48b" class="outline-2">
-<h2 id="org731c48b"><span class="section-number-2">2.</span> Data Types - Values</h2>
+<div id="outline-container-org893a405" class="outline-2">
+<h2 id="org893a405"><span class="section-number-2">2.</span> Data Types - Values</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvars</span>
@@ -265,8 +267,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org963ed10" class="outline-2">
-<h2 id="org963ed10"><span class="section-number-2">3.</span> Data Types - References</h2>
+<div id="outline-container-org9d84856" class="outline-2">
+<h2 id="org9d84856"><span class="section-number-2">3.</span> Data Types - References</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defstruct</span> <span style="color: #6434A3;">Person</span>
@@ -307,8 +309,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgaf4eec9" class="outline-2">
-<h2 id="orgaf4eec9"><span class="section-number-2">4.</span> Dynamic Arrays</h2>
+<div id="outline-container-orgfaadd86" class="outline-2">
+<h2 id="orgfaadd86"><span class="section-number-2">4.</span> Dynamic Arrays</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">dynamic array of type uint256, max 3 elements</span>
@@ -343,8 +345,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org27b48aa" class="outline-2">
-<h2 id="org27b48aa"><span class="section-number-2">5.</span> Functions</h2>
+<div id="outline-container-orgf7d0942" class="outline-2">
+<h2 id="orgf7d0942"><span class="section-number-2">5.</span> Functions</h2>
 <div class="outline-text-2" id="text-5">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">multiply</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:uint256</span> x y<span style="color: #7388D6;">]</span> <span style="color: #D0372D;">:uint256</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:external</span> <span style="color: #D0372D;">:pure</span><span style="color: #7388D6;">]</span>
@@ -362,8 +364,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org484453f" class="outline-2">
-<h2 id="org484453f"><span class="section-number-2">6.</span> Internal and External Functions</h2>
+<div id="outline-container-org354c9ac" class="outline-2">
+<h2 id="org354c9ac"><span class="section-number-2">6.</span> Internal and External Functions</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">internal functions can only be called inside this contract</span>
@@ -394,8 +396,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb4fdb3" class="outline-2">
-<h2 id="orgbb4fdb3"><span class="section-number-2">7.</span> View and Pure Functions</h2>
+<div id="outline-container-org1d0ec62" class="outline-2">
+<h2 id="org1d0ec62"><span class="section-number-2">7.</span> View and Pure Functions</h2>
 <div class="outline-text-2" id="text-7">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvar</span> <span style="color: #006699;">num</span> <span style="color: #7388D6;">(</span>public <span style="color: #D0372D;">:uint256</span><span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
@@ -417,8 +419,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf106134" class="outline-2">
-<h2 id="orgf106134"><span class="section-number-2">8.</span> Constructor</h2>
+<div id="outline-container-org59ebd79" class="outline-2">
+<h2 id="org59ebd79"><span class="section-number-2">8.</span> Constructor</h2>
 <div class="outline-text-2" id="text-8">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvars</span> <span style="color: #006699;">owner</span> <span style="color: #7388D6;">(</span>public <span style="color: #D0372D;">:address</span><span style="color: #7388D6;">)</span>
@@ -438,8 +440,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9ec7bac" class="outline-2">
-<h2 id="org9ec7bac"><span class="section-number-2">9.</span> Private and Public State Variables</h2>
+<div id="outline-container-org66fe553" class="outline-2">
+<h2 id="org66fe553"><span class="section-number-2">9.</span> Private and Public State Variables</h2>
 <div class="outline-text-2" id="text-9">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvars</span>
@@ -455,8 +457,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgbda46d6" class="outline-2">
-<h2 id="orgbda46d6"><span class="section-number-2">10.</span> Constants</h2>
+<div id="outline-container-org43040c5" class="outline-2">
+<h2 id="org43040c5"><span class="section-number-2">10.</span> Constants</h2>
 <div class="outline-text-2" id="text-10">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defconst</span> <span style="color: #006699;">MY_CONSTANT</span> <span style="color: #D0372D;">123</span><span style="color: #707183;">)</span>
@@ -473,8 +475,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org209a3bb" class="outline-2">
-<h2 id="org209a3bb"><span class="section-number-2">11.</span> Immutable</h2>
+<div id="outline-container-org64fc9f5" class="outline-2">
+<h2 id="org64fc9f5"><span class="section-number-2">11.</span> Immutable</h2>
 <div class="outline-text-2" id="text-11">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvar</span> <span style="color: #006699;">OWNER</span> <span style="color: #7388D6;">(</span>immutable <span style="color: #D0372D;">:address</span><span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
@@ -490,8 +492,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd3ca25" class="outline-2">
-<h2 id="orgbd3ca25"><span class="section-number-2">12.</span> If/Else</h2>
+<div id="outline-container-orgc113e91" class="outline-2">
+<h2 id="orgc113e91"><span class="section-number-2">12.</span> If/Else</h2>
 <div class="outline-text-2" id="text-12">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">ifElse</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:uint256</span> x<span style="color: #7388D6;">]</span> <span style="color: #D0372D;">:uint256</span> <span style="color: #D0372D;">:external</span>
@@ -509,8 +511,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org566cc5c" class="outline-2">
-<h2 id="org566cc5c"><span class="section-number-2">13.</span> For Loop</h2>
+<div id="outline-container-orgfa71d98" class="outline-2">
+<h2 id="orgfa71d98"><span class="section-number-2">13.</span> For Loop</h2>
 <div class="outline-text-2" id="text-13">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">forLoop</span> <span style="color: #7388D6;">[]</span> <span style="color: #D0372D;">:uint256</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:external</span> <span style="color: #D0372D;">:pure</span><span style="color: #7388D6;">]</span>
@@ -542,8 +544,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org93e73da" class="outline-2">
-<h2 id="org93e73da"><span class="section-number-2">14.</span> Errors</h2>
+<div id="outline-container-org7e214c9" class="outline-2">
+<h2 id="org7e214c9"><span class="section-number-2">14.</span> Errors</h2>
 <div class="outline-text-2" id="text-14">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvars</span>
@@ -578,8 +580,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org1fd48ba" class="outline-2">
-<h2 id="org1fd48ba"><span class="section-number-2">15.</span> Events</h2>
+<div id="outline-container-org032d47b" class="outline-2">
+<h2 id="org032d47b"><span class="section-number-2">15.</span> Events</h2>
 <div class="outline-text-2" id="text-15">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defevent</span> <span style="color: #006699;">Transfer</span>
@@ -599,8 +601,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa5dab1" class="outline-2">
-<h2 id="orgaa5dab1"><span class="section-number-2">16.</span> Payable</h2>
+<div id="outline-container-org9017d26" class="outline-2">
+<h2 id="org9017d26"><span class="section-number-2">16.</span> Payable</h2>
 <div class="outline-text-2" id="text-16">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defevent</span> <span style="color: #006699;">Deposit</span>
@@ -623,8 +625,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org802bf2d" class="outline-2">
-<h2 id="org802bf2d"><span class="section-number-2">17.</span> Default Function</h2>
+<div id="outline-container-org1b63b2e" class="outline-2">
+<h2 id="org1b63b2e"><span class="section-number-2">17.</span> Default Function</h2>
 <div class="outline-text-2" id="text-17">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defevent</span> <span style="color: #006699;">Payment</span>
@@ -637,8 +639,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org3c01aaa" class="outline-2">
-<h2 id="org3c01aaa"><span class="section-number-2">18.</span> Send Ether</h2>
+<div id="outline-container-org6c19a82" class="outline-2">
+<h2 id="org6c19a82"><span class="section-number-2">18.</span> Send Ether</h2>
 <div class="outline-text-2" id="text-18">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">receive ether into the contract</span>
@@ -655,8 +657,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgab2e3a5" class="outline-2">
-<h2 id="orgab2e3a5"><span class="section-number-2">19.</span> Raw Call</h2>
+<div id="outline-container-org1c0b96d" class="outline-2">
+<h2 id="org1c0b96d"><span class="section-number-2">19.</span> Raw Call</h2>
 <div class="outline-text-2" id="text-19">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">testRawCall</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:address</span> to <span style="color: #D0372D;">:uint256</span> x y<span style="color: #7388D6;">]</span> <span style="color: #D0372D;">:uint256</span> <span style="color: #D0372D;">:external</span>
@@ -678,8 +680,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf291cdb" class="outline-2">
-<h2 id="orgf291cdb"><span class="section-number-2">20.</span> Delegate Call</h2>
+<div id="outline-container-orgb0d7461" class="outline-2">
+<h2 id="orgb0d7461"><span class="section-number-2">20.</span> Delegate Call</h2>
 <div class="outline-text-2" id="text-20">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defvars</span> <span style="color: #006699;">x</span> <span style="color: #7388D6;">(</span>public <span style="color: #D0372D;">:uint256</span><span style="color: #7388D6;">)</span>
@@ -714,8 +716,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org22d632e" class="outline-2">
-<h2 id="org22d632e"><span class="section-number-2">21.</span> Interface</h2>
+<div id="outline-container-org94aae31" class="outline-2">
+<h2 id="org94aae31"><span class="section-number-2">21.</span> Interface</h2>
 <div class="outline-text-2" id="text-21">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr"> 1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">definterface</span> <span style="color: #006699;">TestInterface</span>
@@ -758,8 +760,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org03542c5" class="outline-2">
-<h2 id="org03542c5"><span class="section-number-2">22.</span> Hash Function</h2>
+<div id="outline-container-org9fe0e1a" class="outline-2">
+<h2 id="org9fe0e1a"><span class="section-number-2">22.</span> Hash Function</h2>
 <div class="outline-text-2" id="text-22">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">getHash</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:address</span> addr <span style="color: #D0372D;">:uint256</span> num<span style="color: #7388D6;">]</span> <span style="color: #D0372D;">:bytes32</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:external</span> <span style="color: #D0372D;">:pure</span><span style="color: #7388D6;">]</span>
@@ -775,8 +777,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org11ff42b" class="outline-2">
-<h2 id="org11ff42b"><span class="section-number-2">23.</span> Re-Entrancy Lock</h2>
+<div id="outline-container-orge09880c" class="outline-2">
+<h2 id="orge09880c"><span class="section-number-2">23.</span> Re-Entrancy Lock</h2>
 <div class="outline-text-2" id="text-23">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">func0</span> <span style="color: #7388D6;">[]</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:external</span> <span style="color: #909183;">(</span>nonreentrant <span style="color: #008000;">"lock"</span><span style="color: #909183;">)</span><span style="color: #7388D6;">]</span>
@@ -791,8 +793,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org5737053" class="outline-2">
-<h2 id="org5737053"><span class="section-number-2">24.</span> Self Destruct</h2>
+<div id="outline-container-org17a2fb7" class="outline-2">
+<h2 id="org17a2fb7"><span class="section-number-2">24.</span> Self Destruct</h2>
 <div class="outline-text-2" id="text-24">
 <div class="org-src-container">
 <pre class="src src-clojure"><span class="linenr">1: </span><span style="color: #707183;">(</span><span style="color: #0000FF;">defn</span> <span style="color: #006699;">__default__</span> <span style="color: #7388D6;">[]</span> <span style="color: #7388D6;">[</span><span style="color: #D0372D;">:external</span> <span style="color: #D0372D;">:payable</span><span style="color: #7388D6;">]</span>
@@ -810,7 +812,7 @@
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: z80</p>
-<p class="date">Created: 2022-09-06 Tue 22:33</p>
+<p class="date">Created: 2022-09-06 Tue 22:43</p>
 </div>
 </body>
 </html>
