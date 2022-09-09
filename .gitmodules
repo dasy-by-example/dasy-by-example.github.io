@@ -1,0 +1,3 @@
+[submodule "dasy"]
+	path = dasy
+	url = git@github.com:dasylang/dasy.git
