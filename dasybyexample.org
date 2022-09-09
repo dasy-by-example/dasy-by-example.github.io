@@ -3,29 +3,29 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * Hello World
-#+include: "./examples/hello_world.dasy" src clojure -n
+#+include: "./dasy/examples/hello_world.dasy" src clojure -n
 * Data Types - Values
-#+include: "./examples/value_types.dasy" src clojure -n
+#+include: "./dasy/examples/value_types.dasy" src clojure -n
 * Data Types - References
 
 References types are data types that are passed by their reference, pointer to where the actual data is stored.
 
-#+include: "./examples/reference_types.dasy" src clojure -n
+#+include: "./dasy/examples/reference_types.dasy" src clojure -n
 * Dynamic Arrays
 
 Dynamic arrays are bounded arrays whose length can change. The length of the array cannot exceed the maximum length set where the array is declared.
 
 
-#+include: "./examples/dynamic_arrays.dasy" src clojure -n
+#+include: "./dasy/examples/dynamic_arrays.dasy" src clojure -n
 * Functions
-#+include: "./examples/functions.dasy" src clojure -n
+#+include: "./dasy/examples/functions.dasy" src clojure -n
 * Internal and External Functions
 
 ~:internal~ functions can only be called inside the contract.
 
 ~:external~ functions can only be called from outside the contract.
 
-#+include: "./examples/function_visibility.dasy" src clojure -n
+#+include: "./dasy/examples/function_visibility.dasy" src clojure -n
 * View and Pure Functions
 
 Both ~pure~ and ~view~ functions are read-only. They cannot write anything to the blockchain.
@@ -34,41 +34,41 @@ Both ~pure~ and ~view~ functions are read-only. They cannot write anything to th
 
 ~view~ functions can read state variables, global variables, and call internal (view) functions.
 
-#+include: "./examples/view_pure.dasy" src clojure -n
+#+include: "./dasy/examples/view_pure.dasy" src clojure -n
 * Constructor
 
 ~__init__~ is a special function that is executed only once, when the contract is deployed.
 
-#+include: "./examples/constructor.dasy" src clojure -n
+#+include: "./dasy/examples/constructor.dasy" src clojure -n
 * Private and Public State Variables
 
 Private state variables cannot be accessed from outside of the contract.
 
 Public state variables can be read by anyone, including other contracts.
 
-#+include: "./examples/private_public_state.dasy" src clojure -n
+#+include: "./dasy/examples/private_public_state.dasy" src clojure -n
 * Constants
 
 Constants are variables that cannot change. Any usage of a constant is replaced with its value at compile time.
 
-#+include: "./examples/constants.dasy" src clojure -n
+#+include: "./dasy/examples/constants.dasy" src clojure -n
 * Immutable
 
 Immutables are variables that must be set at compile time and cannot change afterwards. Any usage of a constant in runtime code is replaced with its value at deployment time.
 
-#+include: "./examples/immutable.dasy" src clojure -n
+#+include: "./dasy/examples/immutable.dasy" src clojure -n
 ** When to use immutable variables?
 - You have a variable that needs to be set when the contract is deployed, for example like setting contract owner to ~msg.sender~
 - and this variable will never change after deployment
 ** Why declare variables as ~immutable~?
 - Like constants, ~immutable~ variables save run time gas.
 * If/Else
-#+include: "./examples/if_else.dasy" src clojure -n
+#+include: "./dasy/examples/if_else.dasy" src clojure -n
 * For Loop
 
 There are 2 ways to loop through an array, using ~range~ or directly looping through array elements.
 
-#+include: "./examples/for_loop.dasy" src clojure -n
+#+include: "./dasy/examples/for_loop.dasy" src clojure -n
 * Errors
 
 Use ~assert~ and ~raise~ to check inputs and validate state.
@@ -77,35 +77,35 @@ When an error occurs, it will halt the entire function call, undoing any changes
 
 You will still need to pay gas for the failed transaction.
 
-#+include: "./examples/error.dasy" src clojure -n
+#+include: "./dasy/examples/error.dasy" src clojure -n
 * Events
 
 Events write logs to the blockchain, commonly used by application to monitor blockchain state and as a cheaper alternative to store data on the blockchain without using state variables.
 
 Events can be efficiently searched by indexing their arguments. Up to 3 parameters can be indexed.
 
-#+include: "./examples/event.dasy" src clojure -n
+#+include: "./dasy/examples/event.dasy" src clojure -n
 * Payable
 
 Functions declared with ~payable~ can receive Ether.
 
-#+include: "./examples/payable.dasy" src clojure -n
+#+include: "./dasy/examples/payable.dasy" src clojure -n
 * Default Function
 
 A contract can have a default function, executed when a function that does not exist is called. This is the same function as the fallback function in Solidity.
 
 This function is named ~__default__~ and it is commonly used to receive Ether.
 
-#+include: "./examples/default_function.dasy" src clojure -n
+#+include: "./dasy/examples/default_function.dasy" src clojure -n
 * Send Ether
 
 There are two ways to send Ether from a contract, ~send~ and ~raw_call~. Here we introduce the simpler function to use, ~send~.
 
-#+include: "./examples/send_ether.dasy" src clojure -n
+#+include: "./dasy/examples/send_ether.dasy" src clojure -n
 * Raw Call
 ~raw_call~ is a low level function. It is used to call and send Ether to other functions.
 
-#+include: "./examples/raw_call.dasy" src clojure -n
+#+include: "./dasy/examples/raw_call.dasy" src clojure -n
 * Delegate Call
 
 When contract ~A~ delegates call to contract ~B~, ~B~'s code will be executed inside contract ~A~. This will update state variables and Ether balance inside contract ~A~ and not ~B~.
@@ -114,27 +114,27 @@ Delegate call is commonly used to create an upgradable contract.
 
 Here is the contract that we will delegate call to.
 
-#+include: "./examples/test_delegate_call.dasy" src clojure -n
+#+include: "./dasy/examples/test_delegate_call.dasy" src clojure -n
 
 Here is the contract that will execute the delegated calls.
 
-#+include: "./examples/delegate_call.dasy" src clojure -n
+#+include: "./dasy/examples/delegate_call.dasy" src clojure -n
 * Interface
 
 Use ~definterface~ to define interfaces to use for calling other smart contracts.
 
 Here is the contract that will be called via interface:
 
-#+include: "./examples/test_interface.dasy" src clojure -n
+#+include: "./dasy/examples/test_interface.dasy" src clojure -n
 
 Here is the contract executing the call via interface:
 
-#+include: "./examples/interface.dasy" src clojure -n
+#+include: "./dasy/examples/interface.dasy" src clojure -n
 * Hash Function
 
 Dasy supports the same hash function available in Vyper and Solidity, ~keccak256~
 
-#+include: "./examples/hashing.dasy" src clojure -n
+#+include: "./dasy/examples/hashing.dasy" src clojure -n
 * Re-Entrancy Lock
 
 Dasy has a handy way to secure your contract from re-entrancy.
@@ -143,10 +143,10 @@ A re-entrancy lock can be created on a function with (nonreentrant "lock") in th
 
 Functions can be locked together by using the same name for the locks.
 
-#+include: "./examples/nonreentrant.dasy" src clojure -n
+#+include: "./dasy/examples/nonreentrant.dasy" src clojure -n
 * Self Destruct
 
 ~selfdestruct~ deletes the contract from the blockchain. It takes a single input, an address to send all of Ether stored in the contract.
 
 
-#+include: "./examples/selfdestruct.dasy" src clojure -n
+#+include: "./dasy/examples/selfdestruct.dasy" src clojure -n
